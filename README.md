@@ -1,7 +1,7 @@
 # Dial Down — website
 
 Marketing site for **Dial Down – Breathe and Relax** ([App Store](https://apps.apple.com/us/app/dial-down-breathe-and-relax/id6818409674)).
-Plain HTML/CSS/JS with no build step. Every link is relative, so it works at a domain root or under a GitHub Pages project path.
+Live at **https://www.getdialdown.com** (Vercel, auto-deploys from `main`). Plain HTML/CSS/JS with no build step.
 
 ## Pages
 
@@ -11,7 +11,7 @@ Plain HTML/CSS/JS with no build step. Every link is relative, so it works at a d
 | `support.html` | Support and FAQ |
 | `privacy.html` | Privacy Policy (text copied from the app's `Legal/PrivacyPolicy.html`) |
 | `terms.html` | Terms of Use (text copied from the app's `Legal/TermsOfUse.html`) |
-| `404.html` | Not-found page (GitHub Pages serves it automatically) |
+| `404.html` | Not-found page (Vercel serves it automatically) |
 
 ## Layout
 
