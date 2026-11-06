@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dial Down — Breathe and Relax</title>
+<meta name="description" content="Say what hurts and get a stretch-and-breathe routine in seconds. 372 guided exercises, a 3D body map and on-device chat and voice. Free, with no ads and no tracking.">
+<meta name="theme-color" content="#0E1413">
+<meta name="apple-itunes-app" content="app-id=6818409674">
+<meta property="og:title" content="Dial Down — Breathe and Relax">
+<meta property="og:description" content="Say what hurts. Get the fix in seconds. Free on iPhone.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Nunito:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <nav class="pill" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Dial Down home"><img src="assets/brand/dialdown-symbol.svg" alt="">Dial Down</a>
+      <div class="nav-links">
+        <a href="#features">How it works</a>
+        <a href="#ask">Ask</a>
+        <a href="#body-map">Body Map</a>
+        <a href="#breathe">Breathe</a>
+        <a href="#routines">Routines</a>
+        <a href="#privacy">Privacy</a>
+      </div>
+    </nav>
+    <a class="btn btn-dark nav-cta" href="https://apps.apple.com/us/app/dial-down-breathe-and-relax/id6818409674" target="_blank" rel="noopener">Get the app</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="meter-row hi" style="transition-delay:.05s">
+      <div class="meter" id="meter" role="img" aria-label="Tension meter turning from 9 down to 2">
+        <span class="meter-area"><i id="meterDot"></i><span id="meterArea">Neck</span> tension</span>
+        <span class="meter-bars" id="meterBars" aria-hidden="true"></span>
+        <span class="meter-num" id="meterNum">9</span>
+      </div>
+    </div>
+    <h1 id="heroTitle" aria-label="Dial it down.">
+      <span class="w"><span style="transition-delay:.1s">Dial</span></span>
+      <span class="w"><span style="transition-delay:.2s">it</span></span>
+      <span class="w"><span style="transition-delay:.34s"><em>down.</em></span></span>
+    </h1>
+
+    <div class="hero-stage">
+      <div class="hero-side left hi" style="transition-delay:.9s">
+        <strong>Say what hurts. Get the fix in seconds.</strong>
+        “My lower back is tight.” That's all it takes. Dial Down builds a stretch‑and‑breathe routine, times it, and talks you through every move.
+      </div>
+
+      <div class="phone-wrap" id="heroPhone">
+        <div class="dial" aria-hidden="true">
+          <div class="ring r1"></div><div class="ring r2"></div>
+          <div class="inner" id="dialInner"><svg viewBox="0 0 760 760" id="dialSvg"></svg><span class="knob"></span></div>
+        </div>
+        <div class="hero-chip chip-a" style="transition-delay:1.25s"><b>✦</b>“3 exercises for my lower back”</div>
+        <div class="hero-chip chip-b" style="transition-delay:1.45s"><b>▶</b>5 exercises · 5:30</div>
+        <div class="hero-chip chip-c" style="transition-delay:1.65s"><b>4</b>Inhale… 4‑7‑8</div>
+        <div class="phone" style="transition-delay:.45s">
+          <div class="scr" id="heroScreens">
+            <img class="on" src="assets/screens/01-today.jpg" alt="Today screen: Time to unwind, a 9-minute Unwind session">
+            <img src="assets/screens/10-ask-bar.jpg" alt="Typing “3 exercises for my lower back” into Ask Dial Down" loading="lazy">
+            <img src="assets/screens/11-ask-side-chat.jpg" alt="Ask Dial Down building a routine in a side chat" loading="lazy">
+            <img src="assets/screens/14-ask-pill.jpg" alt="Ask chat shrunk to a pill showing 5 exercises, 5:30" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-side right hi" style="transition-delay:1s">
+        <strong>Free. Private. No account needed.</strong>
+        No ads, no subscriptions, nothing to buy. Ever.
+        <div><a class="btn btn-dark btn-store" href="https://apps.apple.com/us/app/dial-down-breathe-and-relax/id6818409674" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c.02 2.4 2.1 3.2 2.13 3.21-.02.06-.33 1.14-1.1 2.26-.66.97-1.35 1.94-2.43 1.96-1.07.02-1.41-.63-2.63-.63s-1.6.61-2.61.65c-1.05.04-1.84-1.05-2.51-2.02-1.37-1.98-2.41-5.6-1.01-8.04.7-1.21 1.94-1.98 3.29-2 1.03-.02 2 .69 2.63.69.63 0 1.81-.86 3.05-.73.52.02 1.98.21 2.91 1.58-.08.05-1.74 1.01-1.72 3.03M14.36 5.03c.56-.67.93-1.6.83-2.53-.8.03-1.77.53-2.34 1.2-.52.6-.97 1.55-.85 2.46.89.07 1.8-.45 2.36-1.13"/></svg>
+          <span><small>Download on the</small>App Store</span></a></div>
+        <p class="hero-meta">Free · iPhone · iOS 26+</p>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue hi" style="transition-delay:1.8s" aria-hidden="true">Scroll<i></i></div>
+</section>
+
+<!-- ============ STATEMENT ============ -->
+<section class="statement">
+  <div class="wrap">
+    <p id="statement">Tension builds all day — in your neck, your shoulders, your jaw. Here's a calmer way to <em>let it go.</em></p>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section>
+  <div class="wrap">
+    <div class="stats rv">
+      <div class="stat"><span class="dot" style="background:var(--peach)"></span><div><div class="num" data-count="372">372</div><p>Guided stretches across 8 body areas, each with a looping 3D demo</p></div></div>
+      <div class="stat"><span class="dot" style="background:var(--lav)"></span><div><div class="num" data-count="5">5</div><p>Breathing patterns: Box, 4‑7‑8, Belly, Energising and your own</p></div></div>
+      <div class="stat"><span class="dot" style="background:var(--mint)"></span><div><div class="num" data-count="4">4</div><p>Languages: English, Español, Français and 简体中文</p></div></div>
+      <div class="stat hl"><span class="dot" style="background:var(--glow)"></span><div><div class="num">0</div><p>Ads, trackers or in‑app purchases. Ever.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STORY: HOW IT WORKS ============ -->
+<section class="pad" id="features" style="padding-bottom:60px">
+  <div class="wrap">
+    <div class="story-head">
+      <span class="kicker">How it works</span>
+      <h2 class="h2 rv" style="margin-top:16px">From <em>“ugh, my back”</em><br>to relief, in one scroll.</h2>
+    </div>
+
+    <div class="story">
+      <div class="steps" id="steps">
+        <article class="step" data-img="01-today.jpg" data-c="var(--yellow)" data-label="Today">
+          <div class="no">01</div><span class="tag" style="--c:var(--yellow)">Today</span>
+          <h3>Open it. Your session's <em>already waiting.</em></h3>
+          <p>One card answers “what should I do right now?” It's <b>Wake Up</b> in the morning and <b>Unwind</b> at night, with the exercises numbered in order and a single Begin button.</p>
+          <ul><li>Time‑of‑day sessions</li><li>Week strip</li><li>Streaks</li></ul>
+          <div class="phone sm m-shot"><div class="scr"><img class="on" src="assets/screens/01-today.jpg" alt="Today screen" loading="lazy"></div></div>
+        </article>
+        <article class="step" data-img="10-ask-bar.jpg" data-c="var(--lav)" data-label="Ask Dial Down">
+          <div class="no">02</div><span class="tag" style="--c:var(--lav)">Ask · type or talk</span>
+          <h3>Say what feels <em>tight.</em></h3>
+          <p>Tap the sparkle and type, or press and hold to talk. “3 exercises for my lower back” is all it needs.</p>
+          <ul><li>Hold to speak</li><li>Offline dictation</li><li>On‑device AI</li></ul>
+          <div class="phone sm m-shot"><div class="scr"><img class="on" src="assets/screens/10-ask-bar.jpg" alt="Ask bar with typed request" loading="lazy"></div></div>
+        </article>
+        <article class="step" data-img="11-ask-side-chat.jpg" data-c="var(--mint)" data-label="Routine, built">
+          <div class="no">03</div><span class="tag" style="--c:var(--mint)">Instant routine</span>
+          <h3>Get a routine <em>in seconds.</em></h3>
+          <p>Dial Down picks real stretches from its library and times them for you. Keep asking (“2 for my neck”) and it adds them to the same routine.</p>
+          <ul><li>Builds as you chat</li><li>Exact timings</li><li>Safety notes</li></ul>
+          <div class="phone sm m-shot"><div class="scr"><img class="on" src="assets/screens/11-ask-side-chat.jpg" alt="Ask side chat with routine" loading="lazy"></div></div>
+        </article>
+        <article class="step" data-img="13-ask-customize.jpg" data-c="var(--peach)" data-label="Customize">
+          <div class="no">04</div><span class="tag" style="--c:var(--peach)">Customize</span>
+          <h3>Make it <em>yours.</em></h3>
+          <p>A total‑time ring, a − / + stepper on every exercise, and hold‑to‑reorder cards. Then press Start.</p>
+          <ul><li>Reorder</li><li>Retime</li><li>Save as routine</li></ul>
+          <div class="phone sm m-shot"><div class="scr"><img class="on" src="assets/screens/13-ask-customize.jpg" alt="Customize routine screen" loading="lazy"></div></div>
+        </article>
+        <article class="step" data-img="02-exercises.jpg" data-c="var(--blue)" data-label="3D Body Map">
+          <div class="no">05</div><span class="tag" style="--c:var(--blue)">Body map</span>
+          <h3>Or just <em>point at it.</em></h3>
+          <p>Flip Exercises to Body view, drag to rotate, and tap a sore spot. The muscles underneath light up, and you get their stretches.</p>
+          <ul><li>Rotate &amp; pinch</li><li>Muscle picker</li><li>Face zones</li></ul>
+          <div class="phone sm m-shot"><div class="scr"><img class="on" src="assets/screens/02-exercises.jpg" alt="3D body map" loading="lazy"></div></div>
+        </article>
+        <article class="step" data-img="03-breathe.jpg" data-c="var(--mint)" data-label="Breathe">
+          <div class="no">06</div><span class="tag" style="--c:var(--mint)">Breathe</span>
+          <h3>Breathe on <em>a rhythm.</em></h3>
+          <p>Box, 4‑7‑8, Belly, Energising or your own pattern. Set the rounds, tap to preview, and follow the circle with voice cues and soft haptics.</p>
+          <ul><li>5 patterns</li><li>Voice cues</li><li>Haptics</li></ul>
+          <div class="phone sm m-shot"><div class="scr"><img class="on" src="assets/screens/03-breathe.jpg" alt="Breathing screen" loading="lazy"></div></div>
+        </article>
+        <article class="step" data-img="04-routines.jpg" data-c="var(--lav)" data-label="Routines">
+          <div class="no">07</div><span class="tag" style="--c:var(--lav)">Routines</span>
+          <h3>Premade, or <em>your own.</em></h3>
+          <p>Start from Office Stretch, Athletic Recovery or Better Sleep, or build your own from favourites. Share any routine by link.</p>
+          <ul><li>5 premade</li><li>Build your own</li><li>Share by link</li></ul>
+          <div class="phone sm m-shot"><div class="scr"><img class="on" src="assets/screens/04-routines.jpg" alt="Routines screen" loading="lazy"></div></div>
+        </article>
+        <article class="step" data-img="05-profile.jpg" data-c="var(--pink)" data-label="Progress">
+          <div class="no">08</div><span class="tag" style="--c:var(--pink)">Progress</span>
+          <h3>Watch it <em>add up.</em></h3>
+          <p>Streaks, minutes, points and badges, with streak savers for the days life gets in the way. Syncs to Apple Health and Calendar if you want it to.</p>
+          <ul><li>Streaks</li><li>Badges</li><li>Apple Health</li></ul>
+          <div class="phone sm m-shot"><div class="scr"><img class="on" src="assets/screens/05-profile.jpg" alt="Profile and stats" loading="lazy"></div></div>
+        </article>
+      </div>
+
+      <div class="stage-col">
+        <div class="stage">
+          <div class="stage-card" id="stageCard" style="--c:var(--yellow)">
+            <span class="bar" id="storyBar"></span>
+            <span class="stage-count" id="stageCount">01 <span>/ 08</span></span>
+            <div class="phone"><div class="scr" id="stageScreens"></div></div>
+            <span class="stage-label" id="stageLabel">Today</span>
+            <div class="rail" id="rail" role="tablist" aria-label="Jump to step"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ASK ============ -->
+<section class="pad" id="ask" style="padding-top:60px">
+  <div class="wrap">
+    <div class="ask">
+      <div>
+        <span class="kicker">Ask Dial Down · Chat &amp; voice</span>
+        <h2 class="h2 rv" style="margin:16px 0 20px">Don't search. <em>Just say it.</em></h2>
+        <p class="lead">Type it or hold to talk. Dial Down understands where it hurts, how many exercises you want and how long you have, then builds a routine you can start right away.</p>
+        <button class="btn btn-dark replay" id="replay">↻ Replay the conversation</button>
+        <div class="ask-points">
+          <div><h4><i style="background:var(--mint)"></i>Private, on device</h4><p>It runs on Apple's on‑device model, and your voice is transcribed offline. What you say stays on your iPhone.</p></div>
+          <div><h4><i style="background:var(--blue)"></i>Real routines only</h4><p>It picks only from the 372‑exercise library, using the same engine as the rest of the app. It never invents a stretch.</p></div>
+          <div><h4><i style="background:var(--coral)"></i>Safety comes first</h4><p>Mention numbness or sudden, severe pain and it checks in first, with a button to call emergency services.</p></div>
+          <div><h4><i style="background:var(--lav)"></i>Speaks your language</h4><p>Ask in English, Español, Français or 简体中文.</p></div>
+        </div>
+      </div>
+
+      <div class="chat rv" aria-label="Example Ask Dial Down conversation">
+        <div class="chat-head"><span class="spark">✦</span>Ask Dial Down<span class="ctl" aria-hidden="true"><span>—</span><span>⤡</span><span>✕</span></span></div>
+        <div class="tray" id="tray" style="opacity:0">
+          <div class="tray-top">Your routine<span id="trayMeta">3 exercises · 3:45</span></div>
+          <div class="tray-chips" id="trayChips"></div>
+          <div class="tray-btns"><span>⚙︎ Customize</span><span class="go">▶ Start</span></div>
+        </div>
+        <div class="chat-body" id="chatBody" aria-live="polite"></div>
+        <div class="chat-bar"><div class="field" id="field">Type or tap the mic…</div>
+          <span class="mic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-2.08A7 7 0 0 0 19 12h-2Z"/></svg></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ask-strip">
+      <figure class="rv"><div class="phone sm"><div class="scr"><img class="on" src="assets/screens/12-ask-full-screen.jpg" alt="Ask chat full screen" loading="lazy"></div></div>
+        <figcaption><b>Go full screen</b>Your routine stays pinned at the top while you keep chatting.</figcaption></figure>
+      <figure class="rv" style="transition-delay:.12s"><div class="phone sm"><div class="scr"><img class="on" src="assets/screens/14-ask-pill.jpg" alt="Ask chat shrunk to a pill" loading="lazy"></div></div>
+        <figcaption><b>Shrink it to a pill</b>Keep browsing. Your routine waits at “5 exercises · 5:30”.</figcaption></figure>
+      <figure class="rv" style="transition-delay:.24s"><div class="phone sm"><div class="scr"><img class="on" src="assets/screens/15-ask-closed-badge.jpg" alt="Ask button with a badge showing 5" loading="lazy"></div></div>
+        <figcaption><b>Close it anytime</b>The sparkle button keeps count, so nothing gets lost.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BODY MAP ============ -->
+<section class="dark pad" id="body-map">
+  <div class="wrap" style="text-align:center">
+    <span class="kicker">Body Map</span>
+    <h2 class="h2 rv" style="margin:16px auto 20px;max-width:14ch">Point at the ache. <em>Skip</em> the guesswork.</h2>
+    <p class="lead" style="margin:0 auto">You don't need to know it's your levator scapulae. Just tap where it hurts.</p>
+    <div class="bm" style="text-align:left">
+      <div class="bm-steps">
+        <div class="bm-step rv"><div class="no">i.</div><h4>Tap a sore spot</h4><p>Drag to rotate, then tap. The body turns to face the point and the skin fades to show the muscles.</p></div>
+        <div class="bm-step rv"><div class="no">ii.</div><h4>Pick the muscle</h4><p>Up to four likely muscles light up in pastel, labelled on the emptier side.</p></div>
+      </div>
+      <div class="bm-phones" id="bmPhones">
+        <div class="phone sm" data-par="-0.06"><div class="scr"><img class="on" src="assets/screens/02-exercises.jpg" alt="Rotatable 3D body map" loading="lazy"></div></div>
+        <div class="phone sm" data-par="0.08"><div class="scr"><img class="on" src="assets/screens/body-map-picker.jpg" alt="Muscle picker: which area did you mean?" loading="lazy"></div></div>
+      </div>
+      <div class="bm-steps right">
+        <div class="bm-step rv"><div class="no">iii.</div><h4>Get its stretches</h4><p>Only the stretches that actually work that muscle, each with a demo and steps.</p></div>
+        <div class="bm-step rv"><div class="no">iv.</div><h4>Even your face</h4><p>Forehead, eyes, temples and jaw each get their own zone, for the tension you carry in your face.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BREATHE DEMO ============ -->
+<section class="pad" id="breathe">
+  <div class="wrap breathe">
+    <div>
+      <span class="kicker">Try it now</span>
+      <h2 class="h2 rv" style="margin-top:16px">Take one breath <em>with us.</em></h2>
+      <div class="patterns" role="group" aria-label="Breathing pattern">
+        <button class="pat" aria-pressed="true" data-p="box" style="--pc:var(--blue)">Box</button>
+        <button class="pat" aria-pressed="false" data-p="478" style="--pc:var(--lav)">4‑7‑8</button>
+        <button class="pat" aria-pressed="false" data-p="belly" style="--pc:var(--mint)">Belly</button>
+        <button class="pat" aria-pressed="false" data-p="energy" style="--pc:var(--yellow)">Energising</button>
+      </div>
+      <p class="pat-desc" id="patDesc"></p>
+      <div class="timing" id="timing"></div>
+    </div>
+    <div class="orb-box">
+      <div class="orb-track" aria-hidden="true"></div>
+      <div class="orb" id="orb"><div><div class="count" id="count">—</div><div class="phase" id="phase">Tap to begin</div></div></div>
+      <button class="btn btn-dark orb-btn" id="orbBtn" style="background:var(--white);color:var(--ink);box-shadow:0 10px 30px -10px rgba(0,0,0,.4)">▶ Begin</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEW STEPS ============ -->
+<section class="pad" style="padding-top:40px">
+  <div class="wrap">
+    <h2 class="h2 rv" style="text-align:center">Few steps <em>to begin</em></h2>
+    <div class="cards">
+      <div class="card c1 rv"><div class="big">1</div><div><h4>Open it as a guest</h4><p>No account needed. Everything stays on your iPhone until you decide otherwise.</p></div></div>
+      <div class="card c2 rv" style="transition-delay:.1s"><div class="big">2</div><div><h4>Tell it what feels tight</h4><p>Pick goals and focus areas, or just ask. Today's session builds itself around you.</p></div></div>
+      <div class="card c3 rv" style="transition-delay:.2s"><div class="big">3</div><div><h4>Press Begin</h4><p>A 3‑2‑1 get‑ready, a looping demo, and a calm voice telling you when to switch sides.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROUTINES ============ -->
+<section class="pad" id="routines" style="padding-top:40px">
+  <div class="wrap">
+    <span class="kicker">Premade routines</span>
+    <h2 class="h2 rv" style="margin-top:16px">Made for the way <em>you</em> live.</h2>
+    <div class="rtable">
+      <a class="rrow" href="#download"><span class="ic" style="background:var(--mint)">⌨︎</span><h4>Office Stretch</h4><p>Targeted relief for neck, shoulders, wrists and lower back from sitting all day.</p><span class="tag">17 exercises</span><span>↗</span></a>
+      <a class="rrow" href="#download"><span class="ic" style="background:var(--peach)">⚡︎</span><h4>Athletic Recovery</h4><p>Deeper lower‑body stretches and breathing for active recovery days.</p><span class="tag">17 exercises</span><span>↗</span></a>
+      <a class="rrow" href="#download"><span class="ic" style="background:var(--lav)">☾</span><h4>Better Sleep &amp; Breathing</h4><p>Wind‑down breathing and gentle stretches to help you fall asleep faster.</p><span class="tag">11 exercises</span><span>↗</span></a>
+      <a class="rrow" href="#download"><span class="ic" style="background:var(--yellow)">➜</span><h4>Runner's Warm‑Up &amp; Cooldown</h4><p>Dynamic mobility to open up before a run, plus targeted stretches to cool down after.</p><span class="tag">13 exercises</span><span>↗</span></a>
+      <a class="rrow" href="#download"><span class="ic" style="background:var(--blue)">✦</span><h4>Full Body Reset</h4><p>A balanced sweep across flexibility, breathing and posture.</p><span class="tag">Balanced</span><span>↗</span></a>
+    </div>
+    <p class="lead" style="margin-top:24px">Rename, trim, retime, or build your own. Then pin it as your Today routine or share it with a friend by link.</p>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ============ -->
+<section class="pad" id="privacy" style="padding-top:40px">
+  <div class="wrap">
+    <span class="kicker">Privacy</span>
+    <h2 class="h2 rv" style="margin-top:16px">Your body. <em>Your data.</em></h2>
+    <div class="priv">
+      <div class="pcard wide rv">
+        <h2 class="h2">Local‑first,<br>by design.</h2>
+        <div class="zeros"><div>0<small>Ads</small></div><div>0<small>Trackers</small></div><div>0<small>Purchases</small></div></div>
+      </div>
+      <div class="pcard rv"><h4>Nothing leaves without you</h4><p>Without an account, your sessions, routines, streaks and body‑map marks live only on your iPhone. Ask runs on device too. Health and Calendar data never leave it.</p></div>
+      <div class="pcard rv"><h4>Yours to keep, or delete</h4><p>Export everything, or delete your account in the app. That erases the server copy and revokes Sign in with Apple.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final" id="download">
+  <div class="final-orb rv">
+    <div>
+      <h2>Some days you can't <em>switch it off.</em><br>You can always <em>dial it down.</em></h2>
+      <a class="btn btn-dark btn-store" href="https://apps.apple.com/us/app/dial-down-breathe-and-relax/id6818409674" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c.02 2.4 2.1 3.2 2.13 3.21-.02.06-.33 1.14-1.1 2.26-.66.97-1.35 1.94-2.43 1.96-1.07.02-1.41-.63-2.63-.63s-1.6.61-2.61.65c-1.05.04-1.84-1.05-2.51-2.02-1.37-1.98-2.41-5.6-1.01-8.04.7-1.21 1.94-1.98 3.29-2 1.03-.02 2 .69 2.63.69.63 0 1.81-.86 3.05-.73.52.02 1.98.21 2.91 1.58-.08.05-1.74 1.01-1.72 3.03M14.36 5.03c.56-.67.93-1.6.83-2.53-.8.03-1.77.53-2.34 1.2-.52.6-.97 1.55-.85 2.46.89.07 1.8-.45 2.36-1.13"/></svg>
+        <span><small>Download on the</small>App Store</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top" style="padding-left:0"><img src="assets/brand/dialdown-symbol.svg" alt="">Dial Down</a>
+        <p style="color:var(--muted);font-size:15px;max-width:32ch;margin-top:10px">Breathing, stretching and body awareness for iPhone. In English, Español, Français and 简体中文.</p>
+      </div>
+      <div><h5>App</h5><a href="#features">How it works</a><a href="#ask">Ask Dial Down</a><a href="#body-map">Body Map</a><a href="#breathe">Breathe</a><a href="#routines">Routines</a></div>
+      <div><h5>Help</h5><a href="support.html">Support &amp; FAQ</a><a href="mailto:dialdownn@gmail.com">Contact us</a></div>
+      <div><h5>Legal</h5><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+    </div>
+    <div class="foot-big" aria-hidden="true">Dial <span>Down</span></div>
+    <div class="legal"><span>© 2026 Dial Down</span><span>Not medical advice. Stop if anything hurts sharply.</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
