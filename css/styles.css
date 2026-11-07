@@ -383,3 +383,8 @@ footer{padding:80px 0 40px}
 .guide-cta p{margin-bottom:18px}
 .doc .guide-cta a.btn{color:var(--paper);text-decoration:none}
 @media (max-width:640px){.guide-cta{flex-direction:column;text-align:center;padding:28px 20px}.guide-cta .phone{width:150px}}
+.doc .related{list-style:none;margin:12px 0 0;display:grid;gap:10px}
+.doc .related li+li{margin-top:0}
+.doc .related a{display:block;padding:16px 20px;border:1px solid var(--line);border-radius:16px;font-weight:700;color:var(--ink);text-decoration:none;transition:background .2s}
+.doc .related a::after{content:" →";color:var(--accent)}
+.doc .related a:hover{background:rgba(255,201,120,.18)}
