@@ -364,3 +364,22 @@ footer{padding:80px 0 40px}
 .hero-link:hover{color:var(--accent);border-color:var(--accent)}
 .pcard h4 i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:10px;vertical-align:1px}
 .pcard p a{color:var(--ink);font-weight:600}
+
+/* ---------- Guide pages ---------- */
+.doc ol{margin:12px 0 12px 22px}
+.doc ol li::marker{font-weight:700;color:var(--accent)}
+.doc .tip{font-size:15px;background:rgba(255,201,120,.18);border-radius:14px;padding:12px 16px;margin-top:14px}
+.doc .disclaimer{font-size:14px;color:var(--muted);margin-top:48px;padding-top:20px;border-top:1px solid var(--line)}
+.routine-table{overflow-x:auto;margin:12px 0 16px;border:1px solid var(--line);border-radius:16px}
+.routine-table table{width:100%;border-collapse:collapse;font-size:15px}
+.routine-table th,.routine-table td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line);color:#3E3A34}
+.routine-table th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.routine-table tr:last-child td{border-bottom:0}
+.routine-table td:last-child{white-space:nowrap}
+.guide-cta{display:flex;align-items:center;gap:36px;margin:56px 0 8px;padding:32px;border-radius:28px;background:radial-gradient(80% 120% at 0% 0%,rgba(255,201,120,.45),rgba(255,244,230,.6) 70%)}
+.guide-cta .phone{flex:none;width:170px;border-radius:30px;padding:6px}
+.guide-cta .phone .scr{border-radius:24px}
+.guide-cta h3{margin-top:0;font-size:22px}
+.guide-cta p{margin-bottom:18px}
+.doc .guide-cta a.btn{color:var(--paper);text-decoration:none}
+@media (max-width:640px){.guide-cta{flex-direction:column;text-align:center;padding:28px 20px}.guide-cta .phone{width:150px}}
