@@ -30,7 +30,8 @@ section{position:relative;scroll-margin-top:72px}
 .brand img{width:30px;height:30px}
 .nav-links a{padding:9px 14px;border-radius:999px;font-size:14px;font-weight:600;color:var(--muted);transition:background .2s,color .2s}
 .nav-links a:hover,.nav-links a.active{background:var(--ink);color:var(--paper)}
-.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .2s var(--ease),background .2s}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .2s var(--ease),translate .3s var(--spring),box-shadow .3s,background .2s}
+.btn:hover{translate:0 -2px}
 .btn:active{transform:scale(.97)}
 .btn-dark{background:var(--ink);color:var(--paper);padding:12px 20px}
 .btn-dark:hover{background:#000}
@@ -312,7 +313,7 @@ footer{padding:80px 0 40px}
 .foot a{display:block;font-size:15px;font-weight:600;padding:4px 0}
 .foot a:hover{color:var(--accent)}
 .foot-big{font-family:"Nunito",var(--sans);font-weight:800;font-size:clamp(72px,17vw,250px);letter-spacing:-.05em;line-height:.8;color:var(--ink);margin-top:80px;text-align:center;user-select:none}
-.foot-big span{background:linear-gradient(0deg,var(--ember),var(--amber) 55%,var(--glow));-webkit-background-clip:text;background-clip:text;color:transparent}
+.foot-big .g{background:linear-gradient(0deg,var(--ember),var(--amber) 55%,var(--glow));-webkit-background-clip:text;background-clip:text;color:transparent}
 .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
 @media (max-width:760px){.foot{grid-template-columns:1fr 1fr}}
 
@@ -388,3 +389,90 @@ footer{padding:80px 0 40px}
 .doc .related a{display:block;padding:16px 20px;border:1px solid var(--line);border-radius:16px;font-weight:700;color:var(--ink);text-decoration:none;transition:background .2s}
 .doc .related a::after{content:" →";color:var(--accent)}
 .doc .related a:hover{background:rgba(255,201,120,.18)}
+
+/* ---------- MORE MOTION ---------- */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes wordUp{from{transform:translateY(105%)}to{transform:none}}
+
+/* section headings: words rise out of a mask, like the hero title (split in main.js) */
+.h2.rv.split{opacity:1;transform:none}
+.h2.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .06em .1em;margin:0 -.06em -.1em}
+.h2.split .w > span{display:inline-block;transform:translateY(110%);transition:transform 1s cubic-bezier(.16,1,.3,1) calc(var(--i,0) * 70ms)}
+.h2.split.in .w > span{transform:none}
+
+/* kicker dot gives off a soft pulse */
+.kicker::before{animation:ping 3s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,currentColor 45%,transparent)}70%,100%{box-shadow:0 0 0 7px color-mix(in srgb,currentColor 0%,transparent)}}
+
+/* nav: the logo dials down as you scroll; pill lifts off the page */
+.nav .pill{transition:box-shadow .4s}
+.nav.scrolled .pill{box-shadow:0 12px 30px -16px rgba(14,20,19,.4)}
+.nav .brand img{transition:rotate .2s linear}
+
+/* stats: dots pop in one by one */
+.js .stats .dot{scale:0;transition:scale .7s var(--spring)}
+.stats.in .dot{scale:1}
+.stats .stat:nth-child(2) .dot{transition-delay:.12s}
+.stats .stat:nth-child(3) .dot{transition-delay:.24s}
+.stats .stat:nth-child(4) .dot{transition-delay:.36s}
+
+/* step cards: keep the reveal fade (the hover transition used to replace it) + numeral tilt */
+.card.rv{transition:opacity .9s var(--ease),transform .6s var(--ease)}
+.card .big{transition:transform .6s var(--spring)}
+.card:hover .big{transform:translateY(-6px) rotate(-8deg)}
+
+/* ask strip phones lean in on hover */
+.ask-strip .phone{transition:transform .6s var(--spring)}
+.ask-strip figure:hover .phone{transform:translateY(-10px) rotate(-2deg)}
+
+/* routines: rows slide in, icon + arrow react on hover */
+.js .rtable:not(.in) .rrow{opacity:0}
+.rtable.in .rrow{animation:rowIn .8s var(--ease) both;animation-delay:calc(var(--i,0) * 80ms)}
+@keyframes rowIn{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}
+.rrow .ic,.rrow > span:last-child{transition:transform .45s var(--spring)}
+.rrow:hover .ic{transform:rotate(-12deg) scale(1.1)}
+.rrow:hover > span:last-child{transform:translate(4px,-4px)}
+
+/* privacy cards lift; the zeros count down to 0 (main.js) */
+.pcard.rv{transition:opacity .9s var(--ease),transform .5s var(--ease),box-shadow .4s}
+.pcard:not(.wide):hover{transform:translateY(-5px);box-shadow:0 22px 40px -24px rgba(14,20,19,.35)}
+[data-down]{font-variant-numeric:tabular-nums}
+
+/* final CTA: breath ripples spread out from the orb */
+.final-orb{position:relative}
+.final-orb::before,.final-orb::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(255,244,230,.45);pointer-events:none;animation:ripple 6s cubic-bezier(.2,.6,.3,1) infinite}
+.final-orb::after{animation-delay:3s}
+@keyframes ripple{from{transform:scale(1);opacity:.9}to{transform:scale(1.55);opacity:0}}
+
+/* footer wordmark: words rise into place */
+.foot-big .fw{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .1em .1em;margin:0 -.1em -.1em}
+.foot-big .fw > span{display:inline-block}
+.js .foot-big .fw > span{transform:translateY(105%);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.js .foot-big .fw + .fw > span{transition-delay:.12s}
+.foot-big.in .fw > span{transform:none}
+
+/* sub-pages (no JS): load-in, FAQ answers, floating CTA phone, 404 breathing zero */
+.page-hero .wrap > *{animation:fadeUp .9s var(--ease) both}
+.page-hero .wrap > :nth-child(2){animation-delay:.08s}
+.page-hero .wrap > :nth-child(3){animation-delay:.16s}
+.page-hero .wrap > :nth-child(4){animation-delay:.24s}
+.doc{animation:fadeUp 1s var(--ease) .3s both}
+.faq details[open] > div{animation:fadeUp .45s var(--ease)}
+.guide-cta .phone{animation:float 6s ease-in-out infinite}
+.nf > div > *{animation:fadeUp .9s var(--ease) both}
+.nf > div > :nth-child(2){animation-delay:.1s}
+.nf > div > :nth-child(3){animation-delay:.2s}
+.nf > div > :nth-child(4){animation-delay:.3s}
+.nf .big em{display:inline-block;animation:breathe2 5s ease-in-out infinite}
+/* pages without JS: scroll-driven reveals where the browser supports them */
+@supports (animation-timeline:view()){
+  html:not(.js) .foot-big .fw > span{animation:wordUp linear both;animation-timeline:view();animation-range:entry 0% entry 90%}
+  html:not(.js) .doc h2{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .h2.split .w > span,.js .foot-big .fw > span{transform:none!important}
+  .js .stats .dot{scale:1!important}
+  .js .rtable .rrow{opacity:1!important}
+  .final-orb::before,.final-orb::after{display:none}
+}

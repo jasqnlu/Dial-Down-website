@@ -62,8 +62,10 @@
     if (!e.isIntersecting) return;
     e.target.classList.add('in'); rvObs.unobserve(e.target);
     e.target.querySelectorAll('[data-count]').forEach(countUp);
+    e.target.querySelectorAll('[data-down]').forEach(countDown);
   }), { threshold: .15 });
-  $$('.rv').forEach(el => rvObs.observe(el));
+  $$('.rrow').forEach((r, i) => r.style.setProperty('--i', i));
+  $$('.rv, .stagger').forEach(el => rvObs.observe(el));
   function countUp(el) {
     if (reduce) return;
     const end = +el.dataset.count, t0 = performance.now(), dur = 1400;
@@ -71,6 +73,32 @@
       el.textContent = v; if (p < 1) requestAnimationFrame(step); };
     requestAnimationFrame(step);
   }
+  // "0 ads / trackers": dial from 9 down to 0, slowing as it settles
+  function countDown(el, k) {
+    if (reduce) return;
+    let n = +el.dataset.down; const from = n; el.textContent = n;
+    const step = () => { el.textContent = --n; if (n > 0) setTimeout(step, 55 + (from - n) * 28); };
+    setTimeout(step, 350 + k * 160);
+  }
+
+  /* ---------- Section headings: split into words that rise out of a mask ---------- */
+  if (!reduce) $$('.h2.rv').forEach(h => {
+    let i = 0;
+    const walk = node => [...node.childNodes].forEach(c => {
+      if (c.nodeType === 1) { if (c.tagName !== 'BR') walk(c); return; }
+      if (c.nodeType !== 3) return;
+      const frag = document.createDocumentFragment();
+      c.textContent.split(/(\s+)/).forEach(part => {
+        if (!part) return;
+        if (!part.trim()) return frag.append(part);
+        const w = document.createElement('span'), inner = document.createElement('span');
+        w.className = 'w'; inner.textContent = part; inner.style.setProperty('--i', i++);
+        w.append(inner); frag.append(w);
+      });
+      c.replaceWith(frag);
+    });
+    walk(h); h.classList.add('split');
+  });
 
   /* ---------- Statement: split into words ---------- */
   const st = $('#statement');
@@ -106,10 +134,14 @@
   /* ---------- One scroll loop for every scroll-linked effect ---------- */
   const heroTitle = $('#heroTitle'), heroPhone = $('#heroPhone .phone'), dialInner = $('#dialInner');
   const storyEl = $('#steps'), bar = $('#storyBar'), par = $$('#bmPhones [data-par]');
+  const nav = $('.nav'), logo = $('.nav .brand img');
   let ticking = false;
   function onScroll() {
     ticking = false;
     const y = scrollY, vh = innerHeight;
+    // nav: lift the pill once scrolled; the logo turns a full dial-down over the page
+    nav.classList.toggle('scrolled', y > 40);
+    if (!reduce) logo.style.rotate = (-360 * y / Math.max(1, document.documentElement.scrollHeight - vh)).toFixed(1) + 'deg';
     // hero: title drifts up and fades, phone lifts, dial turns down
     if (y < vh * 1.2 && !reduce) {
       heroTitle.style.transform = `translateY(${y * -0.25}px)`;
